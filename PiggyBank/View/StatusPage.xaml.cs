@@ -16,10 +16,6 @@ namespace PiggyBank.View
             
         }
 
-        void LogOut(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PopAsync();
-        }
 
         protected override void OnAppearing()
         {

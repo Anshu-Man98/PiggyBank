@@ -30,21 +30,6 @@
                 </Label.FormattedText>
                 </Label>
             </StackLayout>
-
-             <StackLayout
-                         RelativeLayout.YConstraint="{ConstraintExpression
-                            Type=RelativeToParent,
-                            Property=Height,
-                            Factor=0.05}"
-
-                           RelativeLayout.XConstraint="{ConstraintExpression
-                            Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.05}">
-
-               <Button Text="Log out" Clicked="LogOut" />
-
-            </StackLayout>
         
  
 

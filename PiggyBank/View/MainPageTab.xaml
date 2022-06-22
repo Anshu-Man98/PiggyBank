@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:PiggyBank.View"
     x:Class="PiggyBank.View.MainPageTab"
 
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="True">
 
     
     <!--<local:StatusPage Title="Status" />

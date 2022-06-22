@@ -18,3 +18,6 @@
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/ref/PiggyBank.dll
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/PiggyBank.pdb
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/PiggyBank.csproj.AssemblyReference.cache
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/View/FlyoutView/FlyoutPageSlider.xaml.g.cs
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/View/FlyoutView/FlyoutPageSliderDetail.xaml.g.cs
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/obj/Debug/netstandard2.0/View/FlyoutView/FlyoutPageSliderFlyout.xaml.g.cs
