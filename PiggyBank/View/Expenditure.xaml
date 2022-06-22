@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PiggyBank.View.Expenditure"
+     NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <RelativeLayout  BackgroundColor="#166cff">
+             
+
+            
+            <StackLayout Spacing="30"  HorizontalOptions="Fill"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.085}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                <Button Text="back" Margin="10,0,0,0" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="White" BorderRadius="8" TextColor="#5492ff" HorizontalOptions="Start" WidthRequest="60" HeightRequest="35" VerticalOptions="Start"/>
+            <Label Text="Add Expense / Recived payment" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="StartAndExpand" TextColor="#eef3ff"/>
+       
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,0" RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                    <Label Text="Amount:" TextColor="Azure" HorizontalTextAlignment="Start" />
+                    <Entry x:Name="Amount" Placeholder="$0"  Text="{Binding Amount}"
+                           BackgroundColor="#8fb5ff" WidthRequest="180"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                        <Entry.PlaceholderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="white"></On>
+                        <On Platform="Android" Value="white"></On>
+                    </OnPlatform>
+                </Entry.PlaceholderColor>
+                        </Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <Entry x:Name="catagory" Text="{Binding Comment}" BackgroundColor="#8fb5ff" Placeholder="Paid for / Recieved from" WidthRequest="250"  >
+                         <Entry.PlaceholderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="white"></On>
+                        <On Platform="Android" Value="white"></On>
+                    </OnPlatform>
+                </Entry.PlaceholderColor>
+                        </Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Label Text="Recived payment" TextColor="White"/>
+                    <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                           BackgroundColor="#5592ff"
+                        Padding="0">
+                    <StackLayout >
+                        <Switch  OnColor="#8fb5ff" IsToggled="{Binding IsExpence}"
+        ThumbColor="WhiteSmoke"  />
+                    </StackLayout>
+                    </Frame>
+                    <Label Text="Expense" TextColor="White"/>
+                </StackLayout>
+
+                
+                 <Button Text="Submit Transaction" Command="{Binding SubmitExpenceCommand}" FontAttributes="Bold" BackgroundColor="White" BorderRadius="15" TextColor="#166cff" HorizontalOptions="Center" WidthRequest="200" HeightRequest="35" VerticalOptions="Start"/>
+
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

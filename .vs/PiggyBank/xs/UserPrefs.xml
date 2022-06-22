@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{E28C3C50-11EF-4F74-B552-A2714D3EE454}|Default">
+  <MonoDevelop.Ide.ItemProperties.PiggyBank.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3AF225D1-5A04-4FD8-8372-F704C09333F0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PiggyBank/View/Expenditure.xaml">
+    <Files>
+      <File FileName="PiggyBank/ViewModel/AddExpenseVM.cs" Line="93" Column="32" />
+      <File FileName="PiggyBank/ViewModel/UserDataBase.cs" Line="73" Column="21" />
+      <File FileName="PiggyBank/ViewModel/ExpenditureVM.cs" Line="25" Column="57" />
+      <File FileName="PiggyBank/View/AddExpenditure.xaml.cs" />
+      <File FileName="PiggyBank/View/Expenditure.xaml.cs" />
+      <File FileName="PiggyBank/View/AddExpenditure.xaml" Line="1" Column="1" />
+      <File FileName="PiggyBank/ViewModel/IExpenditureVM.cs" Line="1" Column="1" />
+      <File FileName="PiggyBank.iOS/Main.cs" Line="18" Column="1" />
+      <File FileName="PiggyBank/App.xaml.cs" Line="32" Column="73" />
+      <File FileName="PiggyBank/View/LoginPage.xaml.cs" Line="11" Column="35" />
+      <File FileName="PiggyBank/View/MainPageTab.xaml" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/MainPageTab.xaml.cs" Line="20" Column="9" />
+      <File FileName="PiggyBank/ViewModel/LoginPageVM.cs" Line="112" Column="1" />
+      <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/Current/src/Xamarin.iOS/external/corefx/src/System.Collections/src/System/Collections/Generic/HashSet.cs" Line="1020" Column="1" />
+      <File FileName="PiggyBank/ViewModel/SignUpPageVM.cs" Line="1" Column="1" />
+      <File FileName="PiggyBank/ViewModel/StatusPageVM.cs" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/StatusPage.xaml" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/SignUpPage.xaml" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/Expenditure.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PiggyBank" expanded="True">
+            <Node name="PiggyBank" expanded="True">
+              <Node name="Model" expanded="True" />
+              <Node name="View" expanded="True">
+                <Node name="AddExpenditure.xaml" expanded="True" />
+                <Node name="Expenditure.xaml" expanded="True" selected="True" />
+              </Node>
+              <Node name="ViewModel" expanded="True" />
+            </Node>
+            <Node name="PiggyBank.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PiggyBank.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/ViewModel/LoginPageVM.cs" relfile="PiggyBank/ViewModel/LoginPageVM.cs" line="111" column="1" />
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="12" column="1" />
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="13" column="1" />
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="14" column="1" />
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/ViewModel/AddExpenseVM.cs" relfile="PiggyBank/ViewModel/AddExpenseVM.cs" line="93" column="1" />
+      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/ViewModel/LoginPageVM.cs" relfile="PiggyBank/ViewModel/LoginPageVM.cs" line="112" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

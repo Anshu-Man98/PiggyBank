@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "dgSpecHash": "q/HefDEQUmbxKSh5PuCNI7LeOEyisY2veFMovbvWG2W1TC872pUS/btJ0aPnCixudHll7GXYbFUUy+iIfE/MbQ==",
+  "success": true,
+  "projectFilePath": "/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/PiggyBank.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/amnshumansunil/.nuget/packages/sqlite-net-pcl/1.6.292/sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/sqlitepclraw.bundle_green/1.1.13/sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/sqlitepclraw.core/1.1.13/sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/sqlitepclraw.provider.sqlite3.ios_unified/1.1.13/sqlitepclraw.provider.sqlite3.ios_unified.1.1.13.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/xam.plugins.forms.progressring/0.1.2/xam.plugins.forms.progressring.0.1.2.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/amnshumansunil/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \n PiggyBank.iOS -> PiggyBank -> Xamarin.Essentials (>= 1.7.3) \n PiggyBank.iOS -> Xamarin.Essentials (>= 1.6.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2478 to 5.0.0.2012. Reference the package directly from the project to select a different version. \n PiggyBank.iOS -> PiggyBank -> Xamarin.Forms (>= 5.0.0.2478) \n PiggyBank.iOS -> Xamarin.Forms (>= 5.0.0.2012)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: sqlite-net-pcl from 1.8.116 to 1.6.292. Reference the package directly from the project to select a different version. \n PiggyBank.iOS -> PiggyBank -> sqlite-net-pcl (>= 1.8.116) \n PiggyBank.iOS -> sqlite-net-pcl (>= 1.6.292)",
+      "libraryId": "sqlite-net-pcl",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

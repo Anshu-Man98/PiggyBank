@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PiggyBank.View.StatusPage"
+    xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+    BackgroundColor="#cbdcfd"
+    >
+    <ContentPage.Content>
+        <RelativeLayout x:Name="Main" BackgroundColor="White">
+
+
+           
+
+            <StackLayout  Margin="0,0,10,0"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.05}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=1}">
+                <Label HorizontalOptions="EndAndExpand" FontSize="20" FontAttributes="Bold" TextColor="#176bff" >
+                <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Hi "/>
+                    <Span Text="{Binding UserName}"/>
+                </FormattedString>
+                </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+             <StackLayout
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.05}"
+
+                           RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.05}">
+
+               <Button Text="Log out" Clicked="LogOut" />
+
+            </StackLayout>
+        
+ 
+
+            <StackLayout
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.085}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                    <Label Text="Expenditure"  FontSize="25" FontAttributes="Bold" TextColor="#176bff"
+                       HorizontalTextAlignment="Center"  />
+                </StackLayout>
+                        <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.42}"
+                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.13}"
+                     BackgroundColor="#c6d8fb"
+                                 Margin="5,0,5,0"
+                                 CornerRadius="20"
+                     />
+
+              <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.42}"
+                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.56}"
+                     BackgroundColor="#c6d8fb"
+                                 Margin="5,0,5,0"
+                                 CornerRadius="20"
+                     />
+
+            <StackLayout 
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.15}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                    <Label Text="Overall Expenditure" FontAttributes="Bold"
+                       HorizontalTextAlignment="Start" TextColor="#176bff" Margin="15,0,0,0"/>
+                </StackLayout>
+
+            <StackLayout
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.58}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                    <Label Text="{Binding Month}" FontAttributes="Bold" TextColor="#176bff"
+                       HorizontalTextAlignment="Start" Margin="15,0,0,0" />
+                </StackLayout>
+
+
+
+
+
+            <RelativeLayout x:Name="mainn"  HorizontalOptions="CenterAndExpand" 
+
+
+               RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                             RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=1}">
+
+                
+                    
+
+
+
+
+                 <control:ProgressRing x:Name="progressringtop"
+                                       RingProgressColor="#176bff"
+                                       
+                                       RingThickness="15"
+                                       Progress="{Binding TotalBalance}"
+                                       RingBaseColor="White"
+                                       RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.33}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.33}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.20}"
+
+                           />
+
+                <StackLayout 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                    ElementName=progressringtop,
+                                       Property=Width,
+                                       Factor=1}"
+
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.33}">
+                    <Label Text="{Binding TotalBalanceText}" HorizontalTextAlignment="Center"
+                           FontSize="40" FontAttributes="Bold" TextColor="#176bff"/>
+
+                </StackLayout>
+
+
+
+                
+
+            <control:ProgressRing x:Name="progressringBottom" 
+                                       RingProgressColor="#176bff"
+                                       
+                                       RingThickness="15"
+                                       Progress="{Binding TotalBalance}"
+                                       RingBaseColor="White"
+                                       RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.33}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.33}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.62}"
+
+                          />
+
+
+                                <StackLayout 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                    ElementName=progressringtop,
+                                       Property=Width,
+                                       Factor=1}"
+
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.76}">
+                    <Label Text="{Binding MonthBalanceText}" HorizontalTextAlignment="Center"
+                           FontSize="40" FontAttributes="Bold" TextColor="#176bff"/>
+
+                </StackLayout>
+
+
+           </RelativeLayout>
+
+                    
+
+                
+
+            
+            <!--<StackLayout Spacing="50">
+           
+                <Label Text="Overall Expenditure" FontAttributes="Bold"/>
+                <StackLayout >
+                <RelativeLayout  >
+            <control:ProgressRing x:Name="progressringtop"
+                                       RingProgressColor="#176bff"
+                                       
+                                       RingThickness="10"
+                                       Progress="{Binding TotalBalance}"
+                                       RingBaseColor="#c6d8fb"
+                                       RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=1}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.7}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.06}"
+
+                           RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                    ElementName=progressringtop,
+                            Property=Width,
+                            Factor=0.4}"/>
+                <StackLayout 
+                        >
+                    <Label Text="{Binding TotalBalanceText}" HorizontalTextAlignment="Center"
+                           FontSize="30" FontAttributes="Bold"
+                           
+                      />
+                </StackLayout>
+                
+            </RelativeLayout>
+             </StackLayout>
+             </StackLayout>
+            <StackLayout Spacing="50" >
+            <Label Text="This Month Expenditure"  FontAttributes="Bold"/>
+                <StackLayout >
+                <RelativeLayout BackgroundColor="Blue" >
+
+            <control:ProgressRing x:Name="progressringbottom"
+                                       RingProgressColor="#176bff"
+                                       
+                                       RingThickness="10"
+                                       Progress="{Binding MonthBalance}"
+                                       RingBaseColor="#c6d8fb"
+                                  RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=1}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=1}"
+                                       />
+            <StackLayout 
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.4}"
+
+                           RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0}"
+
+                    >
+                    <Label Text="{Binding MonthBalanceText}" HorizontalTextAlignment="Center"
+                           FontSize="30" FontAttributes="Bold"
+                           
+                      />
+                </StackLayout>
+                    </RelativeLayout>
+                    </StackLayout>
+            
+            </StackLayout>-->
+
+       </RelativeLayout>     
+    </ContentPage.Content>
+</ContentPage>

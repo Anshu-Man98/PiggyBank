@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PiggyBank.LoginPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#176bff">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="My Piggy" TextColor="Azure" FontSize="30" FontAttributes="Bold" Margin="0,40,0,0"/>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+                <Label Text="Log In" TextColor="Azure" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="34" Margin="30,0,0,0">
+                    <Label Text="Name:" TextColor="Azure"/>
+                    <Entry x:Name="name" Placeholder="user name" WidthRequest="250" BackgroundColor="#8fb5ff" Text="{Binding UserName}">
+                              <Entry.PlaceholderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="white"></On>
+                        <On Platform="Android" Value="white"></On>
+                    </OnPlatform>
+                </Entry.PlaceholderColor>
+                        </Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="5" Margin="30,0,0,0">
+                    <Label Text="Password:" TextColor="Azure"/>
+                    <Entry x:Name="password" IsPassword="True" Placeholder="enter password" BackgroundColor="#8fb5ff" WidthRequest="250" Text="{Binding Password}"  >
+                              <Entry.PlaceholderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="white"></On>
+                        <On Platform="Android" Value="white"></On>
+                    </OnPlatform>
+                </Entry.PlaceholderColor>
+                        </Entry>
+                </StackLayout>
+
+                <Button Text="Login" Command="{Binding LogInCommand}" FontAttributes="Bold" BackgroundColor="White" BorderRadius="15" TextColor="#166cff" HorizontalOptions="Center" WidthRequest="150" HeightRequest="35" />
+                <Label Text="Register?" HorizontalOptions="CenterAndExpand" TextColor="Azure" FontAttributes="Bold" TextDecorations="Underline"  >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
