@@ -34,11 +34,11 @@ namespace PiggyBank.View.FlyoutView
             {
                 MenuItems = new ObservableCollection<FlyoutPageSliderFlyoutMenuItem>(new[]
                 {
-                    new FlyoutPageSliderFlyoutMenuItem { Id = 0, Title = "Page 1" },
-                    new FlyoutPageSliderFlyoutMenuItem { Id = 1, Title = "Page 2" },
-                    new FlyoutPageSliderFlyoutMenuItem { Id = 2, Title = "Page 3" },
-                    new FlyoutPageSliderFlyoutMenuItem { Id = 3, Title = "Page 4" },
-                    new FlyoutPageSliderFlyoutMenuItem { Id = 4, Title = "Page 5",},
+                    new FlyoutPageSliderFlyoutMenuItem { Id = 0, Title = "Home", TargetType=typeof(MainPageTab)},
+                    new FlyoutPageSliderFlyoutMenuItem { Id = 1, Title = "Profile Settings", TargetType=typeof(ProfileSettingsPage)},
+                    new FlyoutPageSliderFlyoutMenuItem { Id = 2, Title = "App Theme", TargetType=typeof(AppThemePage) },
+                    new FlyoutPageSliderFlyoutMenuItem { Id = 3, Title = "About", TargetType=typeof(AboutPage) },
+
                 });
             }
 

@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PiggyBank.View.FlyoutView.FlyoutPageSliderFlyout"
-             Title="Flyout">
+             Title="Flyout"
+             BackgroundColor="#c6d8fb">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+        <Grid BackgroundColor="#176bff">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -47,7 +48,7 @@
 
         <ListView.Footer>
 
-            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="15,10" VerticalOptions="End">
               <Button VerticalOptions="FillAndExpand" 
                     Text="Logout"
                     Clicked="Button_Clicked"

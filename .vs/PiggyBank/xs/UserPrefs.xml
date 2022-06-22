@@ -1,32 +1,42 @@
 ﻿<Properties StartupConfiguration="{E28C3C50-11EF-4F74-B552-A2714D3EE454}|Default">
-  <MonoDevelop.Ide.ItemProperties.PiggyBank.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4F7A3A68-7D10-45BF-A9F4-5DE98E465A87" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml.cs">
+  <MonoDevelop.Ide.ItemProperties.PiggyBank.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.81FE7697-03BA-4061-A09E-DF3A6364CA4A" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PiggyBank/View/MainPageTab.xaml.cs">
     <Files>
-      <File FileName="PiggyBank/View/LoginPage.xaml" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/StatusPage.xaml.cs" Line="18" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderDetail.xaml" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderDetail.xaml.cs" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyout.xaml" Line="27" Column="30" />
-      <File FileName="PiggyBank/View/StatusPage.xaml" Line="32" Column="27" />
-      <File FileName="PiggyBank/View/MainPageTab.xaml" Line="8" Column="42" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml.cs" Line="28" Column="1" />
+      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyout.xaml.cs" Line="37" Column="93" />
+      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyoutMenuItem.cs" />
+      <File FileName="PiggyBank/View/ProfileSettingsPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/AppThemePage.xaml" />
+      <File FileName="PiggyBank/View/AppThemePage.xaml.cs" />
+      <File FileName="PiggyBank/View/AboutPage.xaml" />
+      <File FileName="PiggyBank/View/AboutPage.xaml.cs" />
+      <File FileName="PiggyBank/View/ProfileSettingsPage.xaml" />
+      <File FileName="PiggyBank/ViewModel/AddExpenseVM.cs" Line="95" Column="1" />
+      <File FileName="PiggyBank.iOS/Main.cs" Line="18" Column="1" />
+      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml.cs" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml" Line="1" Column="1" />
+      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyout.xaml" Line="6" Column="32" />
+      <File FileName="PiggyBank/View/LoginPage.xaml" Line="7" Column="29" />
+      <File FileName="PiggyBank/View/StatusPage.xaml" Line="77" Column="46" />
+      <File FileName="PiggyBank/View/MainPageTab.xaml" Line="11" Column="91" />
+      <File FileName="PiggyBank/View/MainPageTab.xaml.cs" Line="13" Column="13" />
+      <File FileName="PiggyBank/View/StatusPage.xaml.cs" Line="15" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PiggyBank" expanded="True">
             <Node name="PiggyBank" expanded="True">
-              <Node name="Model" expanded="True" />
               <Node name="View" expanded="True">
                 <Node name="FlyoutView" expanded="True">
-                  <Node name="FlyoutPageSlider.xaml" expanded="True">
-                    <Node name="FlyoutPageSlider.xaml.cs" selected="True" />
-                  </Node>
+                  <Node name="FlyoutPageSlider.xaml" expanded="True" />
                   <Node name="FlyoutPageSliderDetail.xaml" expanded="True" />
                   <Node name="FlyoutPageSliderFlyout.xaml" expanded="True" />
                 </Node>
-                <Node name="AddExpenditure.xaml" expanded="True" />
-                <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="AboutPage.xaml" expanded="True" />
+                <Node name="MainPageTab.xaml" expanded="True">
+                  <Node name="MainPageTab.xaml.cs" selected="True" />
+                </Node>
+                <Node name="ProfileSettingsPage.xaml" expanded="True" />
                 <Node name="StatusPage.xaml" expanded="True" />
               </Node>
               <Node name="ViewModel" expanded="True" />

@@ -2,8 +2,280 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PiggyBank.View.ExpenceListViewPage">
+    x:Class="PiggyBank.View.ExpenceListViewPage"  BackgroundColor="#cbdcfd"
+    >
     <ContentPage.Content>
+
+
+            <StackLayout Padding="10,42,10,10" VerticalOptions="FillAndExpand" BackgroundColor="#f9faff">
+
+
+             <StackLayout x:Name="content" VerticalOptions="Start" >
+                 <Frame CornerRadius="20" 
+           IsClippedToBounds="True"
+                        HasShadow="False"
+                        BackgroundColor="#c7dbff"
+           Padding="0">
+                     
+
+            <StackLayout Padding="10"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Spacing="30">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+                    <Label Text="Balance:" TextColor="#5493ff"/>
+                   <Label Text="{Binding TotalBalance}" TextColor="#176bff" FontSize="45" FontAttributes="Bold"/>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+                    <Label Text="Salary p/m:" TextColor="#5493ff"/>
+                     <Label Text="{Binding MonthBalance}" TextColor="#176bff" FontSize="45" FontAttributes="Bold"/>
+               
+            </StackLayout>
+            </StackLayout>
+                
+
+               
+            </StackLayout>
+
+                 </Frame>
+
+                 <StackLayout>
+                     <Label Text="Transactions" FontSize="20" FontAttributes="Bold" TextColor="#6d93ff" HorizontalTextAlignment="Center"/>
+                 </StackLayout>
+
+
+                 <Frame CornerRadius="20"
+                      
+                        BackgroundColor="#c7dbff"
+                        HasShadow="False"
+                        
+           IsClippedToBounds="True"
+           Padding="0">
+
+                        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+            
+
+            <ScrollView Grid.Row="0" Padding="10">   
+                 <StackLayout>
+
+
+                     <ListView x:Name="listView" ItemsSource="{Binding UserExpense}" BackgroundColor="#c7dbff" 
+                             SeparatorVisibility="None"
+                               HasUnevenRows="True"
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               HeightRequest="{Binding HeightRequest}" >
+                         <ListView.ItemTemplate>
+                             <DataTemplate>
+                                 
+
+                                 <ViewCell >
+
+                                     <Frame CornerRadius="15"
+                                        HasShadow="False"
+                                        IsClippedToBounds="True"
+                                        Padding="0"
+                                            
+                                         Margin="3">
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="FillAndExpand"
+                                             MinimumHeightRequest="100"
+                                             BackgroundColor="#186aff"
+                                            
+                                             Padding="5"
+     
+                                Spacing="0" >
+
+                                 
+                                
+                                <StackLayout Orientation="Vertical" Padding="2" VerticalOptions="Center" Spacing="2">
+                                   <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Spacing="0" WidthRequest="250">
+                                <Label Text="₹" FontSize="20" TextColor="AliceBlue"/>
+                                <Label Text="{Binding Amount}" FontSize="30" TextColor="{Binding color}"/>
+
+                                </StackLayout>
+                                    <Label Text="{Binding comments}" FontSize="20" TextColor="AliceBlue"/>
+
+                                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                <Label Text="by" FontSize="12" TextColor="Gray"/>
+                                <Label Text="{Binding productCompany}" FontSize="12" TextColor="Gray"/>
+
+                                </StackLayout>-->
+
+                                <!--<Label Text="{Binding productPrice}" FontSize="16" TextColor="#eb3443"/>-->
+                           
+
+                                </StackLayout >
+                                    <StackLayout HorizontalOptions="Fill">
+                                        <Label Text="{Binding date}" FontSize="20" TextColor="AliceBlue" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                                          </Frame>
+                                </ViewCell>
+                             </DataTemplate>
+                         </ListView.ItemTemplate>
+
+                         </ListView>
+
+
+                     <!--<Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="DarkRed" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+
+                    <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="LawnGreen" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+                     <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="DarkRed" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+
+                     <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="LawnGreen" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+                    <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="DarkRed" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+                     <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="LawnGreen" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+
+                     <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="DarkRed" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>
+
+
+                     <Frame CornerRadius="15"
+                        HasShadow="False"
+                        IsClippedToBounds="True"
+                        Padding="0">
+                    <StackLayout HeightRequest="60" BackgroundColor="#186aff" Padding="5">
+                        <StackLayout Orientation="Horizontal"  Spacing="180">
+                            <Label Text="$ 2613" TextColor="DarkRed" HorizontalTextAlignment="Start"/>
+                            <Label Text="21-Apr-2022" TextColor="AliceBlue" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Netflix" TextColor="White" />
+                            <Button Text="Edit" FontAttributes="Bold" BackgroundColor="White" BorderRadius="10" TextColor="#186aff" HorizontalOptions="Center" WidthRequest="70" HeightRequest="25"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                         </Frame>-->
+                      
+                 
+                     
+                </StackLayout>
+             </ScrollView>
         
+           <Button Grid.Row="0" Text="+ Add Expense" Clicked="AddExpense" FontAttributes="Bold" BackgroundColor="#ffffff" BorderRadius="15" TextColor="#166cff" HorizontalOptions="End" WidthRequest="115" HeightRequest="35" Margin="0,0,15,15" VerticalOptions="End"/>
+        </Grid>
+                 
+                     </Frame>
+             </StackLayout>
+            
+            
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
