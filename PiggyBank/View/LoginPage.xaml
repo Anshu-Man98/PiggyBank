@@ -13,9 +13,9 @@
             
             <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
                 <Label Text="Log In" TextColor="Azure" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="34" Margin="30,0,0,0">
-                    <Label Text="Name:" TextColor="Azure"/>
-                    <Entry x:Name="name" Placeholder="user name" WidthRequest="250" BackgroundColor="#8fb5ff" Text="{Binding UserName}">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Spacing="0" Margin="20,0,20,0" >
+                    <Label Text="Name: " FontSize="20" TextColor="Azure"/>
+                    <Entry x:Name="name" Placeholder="user name" BackgroundColor="#8fb5ff" Text="{Binding UserName}" HorizontalOptions="FillAndExpand" VerticalOptions="End">
                               <Entry.PlaceholderColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="iOS" Value="white"></On>
@@ -25,9 +25,9 @@
                         </Entry>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="5" Margin="30,0,0,0">
-                    <Label Text="Password:" TextColor="Azure"/>
-                    <Entry x:Name="password" IsPassword="True" Placeholder="enter password" BackgroundColor="#8fb5ff" WidthRequest="250" Text="{Binding Password}"  >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  Margin="20,0,20,0">
+                    <Label Text="Password:" FontSize="20"  TextColor="Azure"/>
+                    <Entry x:Name="password" IsPassword="True" Placeholder="enter password" BackgroundColor="#8fb5ff" Text="{Binding Password}" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
                               <Entry.PlaceholderColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="iOS" Value="white"></On>

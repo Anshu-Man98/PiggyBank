@@ -10,9 +10,10 @@ namespace PiggyBank.View
     {
         public MainPageTab()
         {
+            
             Children.Add(new StatusPage() { Title = "Expenditure" });
-            Children.Add(new AddExpenditure() { Title = "Transactions" });
-
+            Children.Add(new ExpenceListViewPage() { Title = "Transactions" });
+            BindingContext = new StatusPageVM();
             InitializeComponent();
 
         }

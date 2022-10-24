@@ -5,9 +5,20 @@
     xmlns:local="clr-namespace:PiggyBank.View"
     x:Class="PiggyBank.View.MainPageTab"
 
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="True">
 
-    
+    <NavigationPage.TitleView>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  >
+         <Label HorizontalOptions="EndAndExpand" FontSize="20" FontAttributes="Bold" TextColor="#176bff" >
+                <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Hi "/>
+                    <Span Text="{Binding UserName}"/>
+                </FormattedString>
+                </Label.FormattedText>
+                </Label>
+    </StackLayout>
+</NavigationPage.TitleView>
     <!--<local:StatusPage Title="Status" />
     <local:AddExpenditure Title="Add Expenditure"/>
     <ContentPage Title="Page2" IconImageSource="clock.png">

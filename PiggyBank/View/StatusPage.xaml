@@ -12,7 +12,7 @@
 
            
 
-            <StackLayout  Margin="0,0,10,0"
+            <!--<StackLayout  Margin="0,0,10,0"
                          RelativeLayout.YConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Height,
@@ -29,22 +29,7 @@
                 </FormattedString>
                 </Label.FormattedText>
                 </Label>
-            </StackLayout>
-
-             <StackLayout
-                         RelativeLayout.YConstraint="{ConstraintExpression
-                            Type=RelativeToParent,
-                            Property=Height,
-                            Factor=0.05}"
-
-                           RelativeLayout.XConstraint="{ConstraintExpression
-                            Type=RelativeToParent,
-                            Property=Width,
-                            Factor=0.05}">
-
-               <Button Text="Log out" Clicked="LogOut" />
-
-            </StackLayout>
+            </StackLayout>-->
         
  
 
@@ -52,7 +37,7 @@
                     RelativeLayout.YConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Height,
-                            Factor=0.085}"
+                            Factor=0.035}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                                        Type=RelativeToParent,
                                        Property=Width,

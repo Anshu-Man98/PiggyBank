@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using PiggyBank.Model;
 using PiggyBank.View;
+using PiggyBank.View.FlyoutView;
 using Xamarin.Forms;
 
 namespace PiggyBank.ViewModel
@@ -109,7 +110,7 @@ namespace PiggyBank.ViewModel
                     //send.setUserStatus(userId);
 
                     UserId = userData.UserId;
-                    await Navigation.PushAsync(new MainPageTab());
+                    await Navigation.PushAsync(new FlyoutPageSlider());
                 }
 
             }

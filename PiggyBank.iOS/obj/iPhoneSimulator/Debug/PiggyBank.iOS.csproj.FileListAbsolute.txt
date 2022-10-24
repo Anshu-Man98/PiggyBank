@@ -57,14 +57,14 @@
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/PiggyBank.iOS.csproj.CopyComplete
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/PiggyBank.iOS.exe
 /Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/PiggyBank.iOS.pdb
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/actool/_PartialAppManifest.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/actool/_BundleResourceWithLogicalName.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/actool/_ProcessedImageAssetsPath.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/ibtool/_BundleResourceWithLogicalName.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/ibtool/_ProcessedInterfaceDefinitionsPath.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/coremlc/_PartialAppManifest.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/coremlc/_BundleResourceWithLogicalName.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/coremlc/_ProcessedCoreMLModelsPath.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/_ProcessedBundleResourcesPath.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/_ProcessedContentPath.items
-/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.5/optimized/
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/actool/_PartialAppManifest.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/actool/_BundleResourceWithLogicalName.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/actool/_ProcessedImageAssetsPath.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/ibtool/_BundleResourceWithLogicalName.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/coremlc/_PartialAppManifest.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/coremlc/_BundleResourceWithLogicalName.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/_ProcessedBundleResourcesPath.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/_ProcessedContentPath.items
+/Users/amnshumansunil/Projects/PiggyBank/PiggyBank.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.5/optimized/
