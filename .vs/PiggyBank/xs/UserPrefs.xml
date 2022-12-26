@@ -1,61 +1,60 @@
-﻿<Properties StartupConfiguration="{E28C3C50-11EF-4F74-B552-A2714D3EE454}|Default">
-  <MonoDevelop.Ide.ItemProperties.PiggyBank.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.81FE7697-03BA-4061-A09E-DF3A6364CA4A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PiggyBank/View/MainPageTab.xaml.cs">
+﻿<Properties StartupConfiguration="{3974E09D-1C09-4486-B6FA-9201037A61F2}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PiggyBank/View/AddExpensePage/AddExpenceIncomePage.xaml">
     <Files>
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyout.xaml.cs" Line="37" Column="93" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyoutMenuItem.cs" />
-      <File FileName="PiggyBank/View/ProfileSettingsPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/AppThemePage.xaml" />
-      <File FileName="PiggyBank/View/AppThemePage.xaml.cs" />
-      <File FileName="PiggyBank/View/AboutPage.xaml" />
-      <File FileName="PiggyBank/View/AboutPage.xaml.cs" />
-      <File FileName="PiggyBank/View/ProfileSettingsPage.xaml" />
-      <File FileName="PiggyBank/ViewModel/AddExpenseVM.cs" Line="95" Column="1" />
-      <File FileName="PiggyBank.iOS/Main.cs" Line="18" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml.cs" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSlider.xaml" Line="1" Column="1" />
-      <File FileName="PiggyBank/View/FlyoutView/FlyoutPageSliderFlyout.xaml" Line="6" Column="32" />
-      <File FileName="PiggyBank/View/LoginPage.xaml" Line="7" Column="29" />
-      <File FileName="PiggyBank/View/StatusPage.xaml" Line="77" Column="46" />
-      <File FileName="PiggyBank/View/MainPageTab.xaml" Line="11" Column="91" />
-      <File FileName="PiggyBank/View/MainPageTab.xaml.cs" Line="13" Column="13" />
-      <File FileName="PiggyBank/View/StatusPage.xaml.cs" Line="15" Column="13" />
+      <File FileName="PiggyBank/View/Expenditure.xaml.cs" Line="13" Column="13" />
+      <File FileName="PiggyBank/View/AddExpensePage/AddExpenceIncomePage.xaml" Line="72" Column="26" />
+      <File FileName="PiggyBank/View/AddExpensePage/AddExpenceIncomePage.xaml.cs" Line="98" Column="27" />
+      <File FileName="PiggyBank/View/ExpenceListPage/ExpenceListPage.xaml.cs" Line="11" Column="9" />
+      <File FileName="PiggyBank/View/AddExpensePage/AddExpencePage.xaml" Line="16" Column="1" />
+      <File FileName="PiggyBank/View/CustomTab.xaml" Line="71" Column="1" />
+      <File FileName="PiggyBank/View/CustomTab.xaml.cs" Line="23" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PiggyBank" expanded="True">
             <Node name="PiggyBank" expanded="True">
+              <Node name="Interfaces" expanded="True" />
               <Node name="View" expanded="True">
-                <Node name="FlyoutView" expanded="True">
-                  <Node name="FlyoutPageSlider.xaml" expanded="True" />
-                  <Node name="FlyoutPageSliderDetail.xaml" expanded="True" />
-                  <Node name="FlyoutPageSliderFlyout.xaml" expanded="True" />
+                <Node name="AddExpensePage" expanded="True">
+                  <Node name="AddExpenceIncomePage.xaml" expanded="True" selected="True" />
+                  <Node name="AddExpencePage.xaml" expanded="True" />
                 </Node>
-                <Node name="AboutPage.xaml" expanded="True" />
-                <Node name="MainPageTab.xaml" expanded="True">
-                  <Node name="MainPageTab.xaml.cs" selected="True" />
+                <Node name="CommonPageView" expanded="True">
+                  <Node name="CommonView.xaml" expanded="True" />
                 </Node>
-                <Node name="ProfileSettingsPage.xaml" expanded="True" />
-                <Node name="StatusPage.xaml" expanded="True" />
+                <Node name="ExpenceListPage" expanded="True">
+                  <Node name="ExpenceListPage.xaml" expanded="True" />
+                </Node>
+                <Node name="CustomTab.xaml" expanded="True" />
+                <Node name="Expenditure.xaml" expanded="True" />
               </Node>
               <Node name="ViewModel" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="PiggyBank.iOS" expanded="True" />
+            <Node name="PiggyBank.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.PiggyBank.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <DisabledProjects>
+    <String>PiggyBank.iOS/PiggyBank.iOS.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.PiggyBank.Android PreferredExecutionTarget="Android.pixel_-_api_32" AndroidDesignerPreferredTheme="MainTheme" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.0.0.0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="12" column="1" />
-      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="13" column="1" />
-      <Breakpoint file="/Users/amnshumansunil/Projects/PiggyBank/PiggyBank/View/FlyoutView/Flyout.cs" relfile="PiggyBank/View/FlyoutView/Flyout.cs" line="14" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_-_api_32" />
 </Properties>

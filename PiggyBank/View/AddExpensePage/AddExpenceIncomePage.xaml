@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:PiggyBank.CustomInterface"
+    x:Class="PiggyBank.View.AddExpensePage.AddExpenceIncomePage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundImageSource="AppBkg.png"
+    BackgroundColor="#176bff">
+  <ContentPage.Content>
+         <RelativeLayout  BackgroundColor="Transparent">
+
+            <StackLayout Spacing="30"  HorizontalOptions="Fill"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.02}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+
+
+                        <Grid HorizontalOptions="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Android corner radius 20-->
+        <!-- ios Corner radius 10-->
+        <!-- Background Frame -->
+        <Frame Grid.Row="0" BackgroundColor="#25395F"  Padding="0" Margin="0" HasShadow="True" VerticalOptions="Center" HeightRequest="50" WidthRequest="130" HorizontalOptions="Center">
+            <Frame.CornerRadius>
+                <OnPlatform x:TypeArguments="x:Single">
+                    <On Platform="iOS" Value="15"></On>
+                    <On Platform="Android" Value="25"></On>
+                </OnPlatform>
+            </Frame.CornerRadius>
+        </Frame>  
+
+                     <!-- Running Frame -->
+        <Frame x:Name="runningFrame" HeightRequest="40" WidthRequest="60" BackgroundColor="#377BFD" HasShadow="False" Margin="5,0,5,0" Padding="0"  HorizontalOptions="Start" VerticalOptions="Center">
+            <Frame.CornerRadius>
+                <OnPlatform x:TypeArguments="x:Single">
+                    <On Platform="iOS" Value="15"></On>
+                    <On Platform="Android" Value="20"></On>
+                </OnPlatform>
+            </Frame.CornerRadius>
+        </Frame>
+
+        <!-- Selection text1-->
+         <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="65" HeightRequest="40" BackgroundColor="Transparent">
+            <StackLayout.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+                <TapGestureRecognizer Tapped="OnText1Tapped"></TapGestureRecognizer>
+            </StackLayout.GestureRecognizers>
+            <Path x:Name="text1" Data="M13.07 12.43L7 18.5L0.93 12.43M7 1.5V18.33" HorizontalOptions="CenterAndExpand"
+                   Stroke="white" VerticalOptions="Center" StrokeThickness="4" StrokeMiterLimit="10" StrokeLineCap="Round" StrokeLineJoin="Round"/>
+        </StackLayout>
+
+        <!-- Selection text2-->
+         <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End" WidthRequest="65" HeightRequest="40" BackgroundColor="Transparent">
+            <StackLayout.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+                <TapGestureRecognizer Tapped="OnText2Tapped"></TapGestureRecognizer>
+            </StackLayout.GestureRecognizers>
+            <Path HorizontalOptions="CenterAndExpand" x:Name="text2" Data="M13.07 7.57L7 1.5L0.93 7.57M7 18.5V1.67"
+                   Stroke="#377BFD" VerticalOptions="Center" StrokeThickness="4" StrokeMiterLimit="10" StrokeLineCap="Round" StrokeLineJoin="Round"/>
+        </StackLayout>
+
+    </Grid>
+   </StackLayout>
+
+
+
+            <!-- Expence page -->
+
+            <StackLayout x:Name="ExpencePage" Spacing="30"  HorizontalOptions="Fill" BackgroundColor="Transparent"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.1}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=.9}">
+        
+             
+            <Label Text="Add Expense" FontSize="30" FontAttributes="None" HorizontalTextAlignment="Start" Margin="20"  TextColor="#eef3ff"/>
+
+                    <!--<Label Text="Amount:" TextColor="Azure" HorizontalTextAlignment="Start" />-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <local:CustomEntryField x:Name="Amount" Placeholder="Amount"  Text="{Binding Amount}"
+                           PlaceholderColor="White" HeightRequest="50" WidthRequest="350" Opacity="0.85">
+                        </local:CustomEntryField>
+                    </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                    <local:CustomEntryField x:Name="name" Text="{Binding Comment}" Placeholder="Name" PlaceholderColor="White" HeightRequest="50" WidthRequest="350" Opacity="0.85"  >
+                        </local:CustomEntryField>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                                  
+                <Label Text="Transaction Date ▼" FontSize="20" FontAttributes="None" HorizontalTextAlignment="Start"  TextColor="#eef3ff"/>
+                <local:CustomDateField TextColor="#eef3ff" HeightRequest="50" WidthRequest="350" >
+                <local:CustomDateField.Format>yyyy-MM-dd</local:CustomDateField.Format>
+                <local:CustomDateField.MinimumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                <x:String>Jan 1 2022</x:String>
+                </x:Arguments>
+                </sys:DateTime>
+                </local:CustomDateField.MinimumDate>
+                <local:CustomDateField.MaximumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                <x:String>Dec 31 2050</x:String>
+                </x:Arguments>
+                </sys:DateTime>
+                </local:CustomDateField.MaximumDate>
+                </local:CustomDateField>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Margin="20">
+                    <Label Text="Category ▼" FontSize="20" FontAttributes="None" HorizontalTextAlignment="Start"  TextColor="#eef3ff"/>
+                    <Picker TextColor="#eef3ff"  ItemDisplayBinding="{Binding CategoryType}" Title="select category" ItemsSource="{Binding Categories}"/>
+                </StackLayout>
+
+                
+
+                 <!--<Button Text="Submit Transaction" Command="{Binding SubmitExpenceCommand}" FontAttributes="Bold" BackgroundColor="White" BorderRadius="15" TextColor="#166cff" HorizontalOptions="Center" WidthRequest="200" HeightRequest="35" VerticalOptions="Start"/>-->
+
+                <RelativeLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="150" HeightRequest="150" >
+
+                    <Button WidthRequest="150" HeightRequest="150" Text="submit" BackgroundColor="Transparent" TextColor="Transparent"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"></Button>
+                     <Path x:Name="SubmitExpenceVector"  HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Aspect="Fill" WidthRequest="150" HeightRequest="150"  Data="M262 298V9.79585C242.48 3.43734 221.642 0 200 0C89.5431 0 0 89.543 0 200C0 235.606 9.3045 269.039 25.6148 298H262ZM222.988 118.191L129.988 201.191L118.177 211.732L108.287 199.37L68.287 149.37L91.713 130.63L121.823 168.268L203.012 95.8088L222.988 118.191Z"
+                       Fill="white" >
+                    </Path>
+
+                </RelativeLayout>
+            </StackLayout>
+
+
+
+            <!-- Income page -->
+
+                        <StackLayout x:Name="IncomePage" Spacing="30" HorizontalOptions="Fill"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.1}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=.9}">
+        
+             
+            <Label Text="Add Income" FontSize="30" FontAttributes="None" HorizontalTextAlignment="Start" TextColor="#eef3ff" Margin="20"/>
+       
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,0" RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+                    <!--<Label Text="Amount:" TextColor="Azure" HorizontalTextAlignment="Start" />-->
+                    <local:CustomEntryField x:Name="Amountt" Placeholder="Amount"  Text="{Binding Amount}"
+                           PlaceholderColor="White" HeightRequest="50" WidthRequest="350" Opacity="0.85">
+                        </local:CustomEntryField>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <local:CustomEntryField x:Name="catagoryy" Text="{Binding Comment}" Placeholder="Name" PlaceholderColor="White" HeightRequest="50" WidthRequest="350" Opacity="0.85">
+                        </local:CustomEntryField>
+                </StackLayout>
+
+                       <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                                  
+                <Label Text="Transaction Date ▼" FontSize="20" FontAttributes="None" HorizontalTextAlignment="Start"  TextColor="#eef3ff"/>
+                <local:CustomDateField TextColor="#eef3ff" HeightRequest="50" WidthRequest="350" >
+                <local:CustomDateField.Format>yyyy-MM-dd</local:CustomDateField.Format>
+                <local:CustomDateField.MinimumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                <x:String>Jan 1 2022</x:String>
+                </x:Arguments>
+                </sys:DateTime>
+                </local:CustomDateField.MinimumDate>
+                <local:CustomDateField.MaximumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                <x:String>Dec 31 2023</x:String>
+                </x:Arguments>
+                </sys:DateTime>
+                </local:CustomDateField.MaximumDate>
+                </local:CustomDateField>
+                </StackLayout>
+
+               
+
+                
+                 <!--<Button Text="Submit Transaction" Command="{Binding SubmitExpenceCommand}" FontAttributes="Bold" BackgroundColor="White" BorderRadius="15" TextColor="#166cff" HorizontalOptions="Center" WidthRequest="200" HeightRequest="35" VerticalOptions="Start"/>-->
+                <RelativeLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="150" HeightRequest="150" >
+
+                    <Button WidthRequest="150" HeightRequest="150" Text="submit" BackgroundColor="Transparent" TextColor="Transparent"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked_1" ></Button>
+                     <Path x:Name="SubmitIncomeVector"  HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Aspect="Fill" WidthRequest="150" HeightRequest="150"  Data="M262 298V9.79585C242.48 3.43734 221.642 0 200 0C89.5431 0 0 89.543 0 200C0 235.606 9.3045 269.039 25.6148 298H262ZM222.988 118.191L129.988 201.191L118.177 211.732L108.287 199.37L68.287 149.37L91.713 130.63L121.823 168.268L203.012 95.8088L222.988 118.191Z"
+                       Fill="white" >
+                    </Path>
+
+                </RelativeLayout>
+
+ 
+            </StackLayout>
+
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+

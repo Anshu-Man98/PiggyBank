@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using PiggyBank.Services;
+using PiggyBank.View;
 using PiggyBank.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -32,7 +33,7 @@ namespace PiggyBank
             DependencyService.Register<IExpenditureVM, ExpenditureVM>();
             InitializeComponent();
 
-            MainPage =new NavigationPage(new LoginPage());
+            MainPage =new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()

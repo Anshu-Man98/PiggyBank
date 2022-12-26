@@ -18,25 +18,7 @@
            Padding="0">
                      
 
-            <StackLayout Padding="10"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
-            <StackLayout Spacing="30">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
-                    <Label Text="Balance:" TextColor="#5493ff"/>
-                   <Label Text="{Binding TotalBalance}" TextColor="#176bff" FontSize="45" FontAttributes="Bold"/>
-                
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
-                    <Label Text="Salary p/m:" TextColor="#5493ff"/>
-                     <Label Text="{Binding MonthBalance}" TextColor="#176bff" FontSize="45" FontAttributes="Bold"/>
-               
-            </StackLayout>
-            </StackLayout>
-                
-
-               
-            </StackLayout>
 
                  </Frame>
 

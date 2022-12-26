@@ -89,7 +89,7 @@ namespace PiggyBank.ViewModel
         private void SubmitExpence()
         {
             UserExpenditure UserExpendituresList =
-            new UserExpenditure() { Id = 6, UserId = LoginPageVM.UserId, Amount = Convert.ToDouble(this.Amount), isExpense = this.IsExpence, comments = this.Comment, color = this.Color, date = DateTime.Now.Date.ToString("dd/MM/yyyy") };
+            new UserExpenditure() { Id = 6, UserId = 1, Amount = Convert.ToDouble(this.Amount), isExpense = this.IsExpence, comments = this.Comment, color = this.Color, date = DateTime.Now.Date.ToString("dd/MM/yyyy") };
             _userDatabase.addUserExpense(UserExpendituresList);
             var dd = new MainPageTab();
 

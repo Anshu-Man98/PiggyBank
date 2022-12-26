@@ -2,33 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using PiggyBank.Model;
+using Xamarin.Forms;
 
 namespace PiggyBank.ViewModel
 {
-    public class UserDataBase:IUserDatabase
+    public class UserDataBase: IUserDatabase
     {
 
-        List<LoginData> UserListDatas =new List<LoginData>()
-            {
-            new LoginData() { UserId = 1, username = "Anshu", password = "9898", ProfilePic = "qwer", MonthSalary = 4000, TotalBalance = 10200 },
-            new LoginData() { UserId = 2, username = "Abhii", password = "8989", ProfilePic = "qweree" ,MonthSalary = 3000, TotalBalance = 10300 }
-        };
+        LoginData UserLoginData = new LoginData();
 
         List<UserExpenditure> UserExpenditures = new List<UserExpenditure>()
             {
-            new UserExpenditure() { Id =1, UserId = 1, Amount = -200, isExpense= false, comments = "food",color="DarkRed", date = DateTime.Now.Date.ToString("dd/MM/yyyy") },
-            new UserExpenditure() { Id=2, UserId = 1, Amount = 300, isExpense = true, comments = "netflix" ,color="LightGreen", date = DateTime.Now.Date.ToString("dd/MM/yyyy") }
+            new UserExpenditure() { Id =1, UserId = 1, Amount = -200, isExpense= false, comments = "food", color= "#FBA9A9", date = DateTime.Now.Date.ToString("dd/MM/yyyy") },
+            new UserExpenditure() { Id=2, UserId = 1, Amount = 300, isExpense = true, comments = "netflix" ,color="#BCFFD3", date = DateTime.Now.Date.ToString("dd/MM/yyyy") }
         };
 
-        public UserDataBase()
-        {
-        }
 
-        public List<LoginData> UsrData()
-
+        List<ExpenceCategory> Categories = new List<ExpenceCategory>()
         {
-            return UserListDatas;
-        }
+            new ExpenceCategory() { CategoryID =1, CategoryType = "Food & Drinks" },
+            new ExpenceCategory() { CategoryID =2, CategoryType = "Personal"},
+            new ExpenceCategory() { CategoryID =3, CategoryType = "Bills"},
+            new ExpenceCategory() { CategoryID =4, CategoryType = "Shopping"},
+            new ExpenceCategory() { CategoryID =5, CategoryType = "Other"}
+        };
+
 
         public List<UserExpenditure> getUserExpense(int userId)
         {
@@ -42,32 +40,34 @@ namespace PiggyBank.ViewModel
                 }
             }
             return userExpense;
-
         }
 
-        public double TotalUserExpense(int userId)
+        public double TotalUserExpense()
         {
             double totalExpence = 0;
-            var expense = getUserExpense(userId);
+            var expense = getUserExpense(1);
             foreach (var item in expense)
             {
-                    totalExpence += item.Amount;
-                
+            totalExpence += item.Amount; 
             }
             return totalExpence;
-
         }
 
+        public List<ExpenceCategory> Expencecategories()
+        {
+            return Categories;
+        }
 
         public List<UserExpenditure> UserExpense()
-
         {
             return UserExpenditures;
         }
 
         public void addUserData(LoginData userData)
         {
-            UserListDatas.Add(userData);
+            UserLoginData.nikName = userData.nikName;
+            UserLoginData.Income = userData.Income;
+            UserLoginData.TotalBalance = userData.TotalBalance;
         }
 
         public void addUserExpense(UserExpenditure expense)
@@ -75,20 +75,28 @@ namespace PiggyBank.ViewModel
             UserExpenditures.Add(expense);
         }
 
-        public double[] getUserAmt(int userId)
+        //public double[] getUserAmt(int userId)
+        //{
+        //    var coll = UserListDatas;
+        //    var found = coll.FirstOrDefault(c => c.UserId == userId);
+        //    return new double[] { found.MonthSalary, found.TotalBalance };
+        //}
+
+        //public string  getUserBalanceAndIncome()
+        //{
+        //    var coll = UserListDatas;
+        //    var found = coll.FirstOrDefault(c => c.UserId == userId);
+        //    return found.username;
+        //}
+
+        public string getUserNikName()
         {
-            var coll = UserListDatas;
-            var found = coll.FirstOrDefault(c => c.UserId == userId);
-            return new double[] { found.MonthSalary, found.TotalBalance };
+            return  UserLoginData.nikName;
         }
 
-        public string  getUserName(int userId)
+        public double[] getUserBalanceAndIncome()
         {
-            var coll = UserListDatas;
-            var found = coll.FirstOrDefault(c => c.UserId == userId);
-            return found.username;
+           return new double[] { UserLoginData.TotalBalance, UserLoginData.Income };
         }
-
-
     }
 }

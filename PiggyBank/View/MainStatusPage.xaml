@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+    xmlns:Boxx="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="PiggyBank.View.MainStatusPage"
+    BackgroundColor="#F1F7FF"
+    >
+
+
+    <ContentView.Content>
+                 <RelativeLayout x:Name="Main" BackgroundColor="White" Margin="0,0,0,70">
+
+
+            <StackLayout>
+                    <Label Text="November Expence"  FontSize="20" FontAttributes="Bold" TextColor="#176bff"
+                       HorizontalTextAlignment="Start" Margin="5,0,0,0" />
+             </StackLayout>
+
+
+
+
+            <StackLayout
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.51}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.25}"
+                    >
+                    <Label Text="Avaliable Balance" FontSize="20" FontAttributes="Bold" TextColor="#176bff"
+                       HorizontalTextAlignment="Start" Margin="15,0,0,0" />
+                <Boxx:PancakeView BackgroundGradientStartPoint="1.2,0" BackgroundGradientEndPoint="0,1.5"
+                                  HeightRequest="1000"
+                                 Margin="20,0,20,7"
+                                 CornerRadius="20"
+                     >
+                     <Boxx:PancakeView.Shadow>
+                        <Boxx:DropShadow Offset="0,3"/>
+
+                    </Boxx:PancakeView.Shadow>
+                    <Boxx:PancakeView.BackgroundGradientStops>
+                        <Boxx:GradientStopCollection>
+                            <Boxx:GradientStop Color="White" Offset="0"/>
+                             <Boxx:GradientStop Color="#065BFF" Offset="0.7"/>
+                        </Boxx:GradientStopCollection>
+                    </Boxx:PancakeView.BackgroundGradientStops>
+                    </Boxx:PancakeView>
+
+            </StackLayout>
+
+
+
+            <StackLayout
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.76}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.25}"
+                   >
+                    <Label Text="Split Bill" FontSize="20" FontAttributes="Bold" TextColor="#176bff"
+                       HorizontalTextAlignment="Start" Margin="15,0,0,0" />
+                <Boxx:PancakeView BackgroundGradientStartPoint="1,0.5" BackgroundGradientEndPoint="0,4"
+                                  HeightRequest="1000"
+                        Margin="20,0,20,7"
+                        CornerRadius="20"
+                     >
+
+                    <Boxx:PancakeView.Shadow>
+                        <Boxx:DropShadow Offset="0,3"/>
+
+                    </Boxx:PancakeView.Shadow>
+                    
+                      <Boxx:PancakeView.BackgroundGradientStops>
+                        <Boxx:GradientStopCollection>
+                            <Boxx:GradientStop Color="#065BFF" Offset="0"/>
+                             <Boxx:GradientStop Color="White" Offset="0.7"/>
+                        </Boxx:GradientStopCollection>
+                    </Boxx:PancakeView.BackgroundGradientStops>
+
+                    </Boxx:PancakeView>
+
+            </StackLayout>
+
+
+
+
+
+            <RelativeLayout x:Name="mainn"  HorizontalOptions="CenterAndExpand" 
+               RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                             RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=1}">
+
+                                <Ellipse x:Name="ellipseContainer2" Stroke="#79A4F6"
+         StrokeThickness="10"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.48}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.48}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.045}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=-0.015}"
+                                  Fill="#79A4F6" Opacity="0.5"/>
+
+                 <control:ProgressRing x:Name="progressring"
+                                       RingProgressColor="#176bff"
+                                       
+                                       RingThickness="15"
+                                       Progress="0.5"
+                                       RingBaseColor="White"
+                                       RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.45}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.45}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.06}"
+
+                           />
+
+
+                <Ellipse x:Name="ellipseContainer" Stroke="#176bff"
+         StrokeThickness="4"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.37}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.37}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.1}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.04}"
+                                  Fill="#F3F4FB" Opacity="1"/>
+
+                <StackLayout
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                      ElementName=progressring,
+                                       Property=Width,
+                                       Factor=1}"
+
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.24}"
+                             Margin="25,0,30,0"
+                             >
+                    
+                    <Label Text="$100000" HorizontalTextAlignment="Center"
+                           FontSize="26" FontAttributes="Bold" TextColor="#176bff"/>
+                    <Label Text="avaliable balance of the month" HorizontalTextAlignment="Center"
+                           FontSize="15" FontAttributes="Bold" TextColor="Black" Padding="30,0,30,0" Margin="0"/>
+
+                </StackLayout>
+           </RelativeLayout>
+
+
+       </RelativeLayout>     
+    </ContentView.Content>
+</ContentView>
+

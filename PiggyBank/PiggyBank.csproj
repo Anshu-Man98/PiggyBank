@@ -11,10 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Sharpnado.Shadows" Version="1.2.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.0.5" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="SQLite" />
@@ -25,14 +36,40 @@
     <None Remove="View\" />
     <None Remove="ViewModel\" />
     <None Remove="Xam.Plugins.Forms.ProgressRing" />
-    <None Remove="View\FlyoutView\" />
+    <None Remove="Xamarin.FFImageLoading" />
+    <None Remove="Xamarin.Forms.PancakeView" />
+    <None Remove="FormsToolkit" />
+    <None Remove="Sharpnado.Shadows" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Xamarin.CommunityToolkit.Markup" />
+    <None Remove="AppFonts\" />
+    <None Remove="View\CommonPageView\" />
+    <None Remove="Microcharts" />
+    <None Remove="Microcharts.Forms" />
+    <None Remove="View\AddExpensePage\" />
+    <None Remove="View\ExpenceListPage\" />
+    <None Remove="CustomInterface\" />
+    <None Remove="View\SignUpPage\" />
+    <None Remove="Xamarin.FFImageLoading.Svg" />
+    <None Remove="Xamarin.FFImageLoading.Forms" />
+    <None Remove="Xamarin.FFImageLoading.Svg.Forms" />
+    <None Remove="Xamarin.FFImageLoading.Transformations" />
+    <None Remove="Interfaces\" />
+    <None Remove="View\OverViewPage\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Services\" />
     <Folder Include="View\" />
     <Folder Include="ViewModel\" />
-    <Folder Include="View\FlyoutView\" />
+    <Folder Include="AppFonts\" />
+    <Folder Include="View\CommonPageView\" />
+    <Folder Include="View\AddExpensePage\" />
+    <Folder Include="View\ExpenceListPage\" />
+    <Folder Include="CustomInterface\" />
+    <Folder Include="View\SignUpPage\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="View\OverViewPage\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="View\LoginPage.xaml.cs">

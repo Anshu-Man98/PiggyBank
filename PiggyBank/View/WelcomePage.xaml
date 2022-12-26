@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="PiggyBank.View.WelcomePage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundImageSource="AppBkg.png"
+    BackgroundColor="#176bff">
+    <ContentPage.Content>
+        <StackLayout Padding="15" Margin="0,0,0,30">
+            <StackLayout VerticalOptions="EndAndExpand" Spacing="25">
+                <Label Text="Welcome to PiggyTracker." TextColor="Azure" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,40,0"/>
+                <Label Text="The best way to track what you spend your money on." TextColor="#DFDFDF" FontSize="20" FontAttributes="None" HorizontalTextAlignment="Start" Margin="0,0,40,0"/>
+
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  Margin="20,0,20,0">
+                    <Label Text="Password:" FontSize="20"  TextColor="Azure"/>
+                    <Entry x:Name="password" IsPassword="True" Placeholder="enter password" BackgroundColor="#8fb5ff" Text="{Binding Password}" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
+                              <Entry.PlaceholderColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="white"></On>
+                        <On Platform="Android" Value="white"></On>
+                    </OnPlatform>
+                </Entry.PlaceholderColor>
+                        </Entry>
+                </StackLayout>-->
+                <!--<ffsvg:SvgCachedImage Source="SvgEllipse.svg"/>-->
+
+                <Button android:Button.UseDefaultShadow="true" Text="Get Started"
+                        Clicked="GetStartedClicked"
+                        FontAttributes="Bold"
+                        BackgroundColor="White"
+                        FontSize="30" BorderRadius="25"
+                        TextTransform="None" TextColor="Black"
+                        HorizontalOptions="Center"
+                        WidthRequest="310" HeightRequest="80" />
+                <!--<Label Text="Register?" HorizontalOptions="CenterAndExpand" TextColor="Azure" FontAttributes="Bold" TextDecorations="Underline"  >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        
+                    </Label.GestureRecognizers>
+                </Label>-->
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

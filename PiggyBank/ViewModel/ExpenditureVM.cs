@@ -12,7 +12,7 @@ namespace PiggyBank.ViewModel
         private readonly IUserDatabase _userDatabase;
         public ExpenditureVM()
         {
-            int UserId = LoginPageVM.UserId;
+            int UserId = 1;
             this._userDatabase = DependencyService.Get<IUserDatabase>();
             setAmount(UserId);
 
@@ -23,7 +23,7 @@ namespace PiggyBank.ViewModel
         public string balance = "";
         public string salary = "";
         public List<UserExpenditure> userExpense = null;
-        public int heightRequest = 150;
+        public int heightRequest = 250;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -59,9 +59,9 @@ namespace PiggyBank.ViewModel
 
         public void setAmount(int UserId)
         {
-            var amt = _userDatabase.getUserAmt(UserId);
-            balance = amt[1].ToString();
-            salary = amt[0].ToString();
+            var amt = _userDatabase.getUserBalanceAndIncome();
+            balance = amt[0].ToString();
+            salary = amt[1].ToString();
 
         }
 
@@ -72,10 +72,10 @@ namespace PiggyBank.ViewModel
             switch (userExpense.Count)
             {
                 case 0:
-                    heightRequest = 150;
+                    heightRequest = 250;
                     break;
                 default:
-                    heightRequest = 150 * userExpense.Count;
+                    heightRequest = 250 * userExpense.Count;
                     break;
             }
 

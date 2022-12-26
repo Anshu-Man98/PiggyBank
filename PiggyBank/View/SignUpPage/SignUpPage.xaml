@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PiggyBank.CustomInterface"
+    x:Class="PiggyBank.SignUpPage"
+    NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasBackButton="False"
+    BackgroundImageSource="@drawable/AppBkg.png"
+    BackgroundColor="#176bff">
+
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+
+            
+            <StackLayout VerticalOptions="EndAndExpand" Spacing="30">
+
+                <StackLayout Padding="20,0,0,0">
+                <Label Text="PiggyTracker."
+                       TextColor="Azure"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       Margin="0,0,0,0"/>
+                <Label Text="you are just one step away!"
+                       TextColor="#DFDFDF"
+                       FontSize="20"
+                       FontAttributes="None"
+                       HorizontalTextAlignment="Start"
+                       Margin="0,0,40,0"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="34"
+                             Margin="0,0,0,0">
+                    <local:CustomEntryField x:Name="Name"
+                                            Text="{Binding NikName}"
+                                            Placeholder="Nik Name"
+                                            PlaceholderColor="White"
+                                            HeightRequest="50" WidthRequest="350"
+                                            Opacity="0.85">
+                        </local:CustomEntryField>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="5"
+                             Margin="0,0,0,0">
+                    <local:CustomEntryField x:Name="Balance"
+                                            Text="{Binding Balance}"
+                                            Placeholder="Total Balance"
+                                            PlaceholderColor="White"
+                                            HeightRequest="50" WidthRequest="350"
+                                            Opacity="0.85"
+                                            Keyboard="Numeric">
+                        </local:CustomEntryField>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+                             Spacing="5" Margin="0,0,0,0">
+
+                    <local:CustomEntryField x:Name="Income"
+                                            Text="{Binding Salary}"
+                                            Placeholder="Income per month"
+                                            PlaceholderColor="White"
+                                            HeightRequest="50" WidthRequest="350"
+                                            Opacity="0.85"
+                                            Keyboard="Numeric">
+                        </local:CustomEntryField>
+                </StackLayout>
+
+
+                <Button Text="Let's go!"
+                        TextTransform="None"
+                        Command="{Binding LetsGOCommand}"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        BackgroundColor="White"
+                        BorderRadius="35"
+                        TextColor="Black"
+                        HorizontalOptions="EndAndExpand"
+                        WidthRequest="130"
+                        HeightRequest="60" />
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

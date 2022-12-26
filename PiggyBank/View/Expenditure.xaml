@@ -10,7 +10,7 @@
              
 
             
-            <StackLayout Spacing="30"  HorizontalOptions="Fill"
+            <StackLayout Spacing="30"  HorizontalOptions="Fill" BackgroundColor="#166cff"
                          RelativeLayout.YConstraint="{ConstraintExpression
                             Type=RelativeToParent,
                             Property=Height,
@@ -18,11 +18,20 @@
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                                        Type=RelativeToParent,
                                        Property=Width,
-                                       Factor=1}">
-                <Button Text="back" Margin="10,0,0,0" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="White" BorderRadius="8" TextColor="#5492ff" HorizontalOptions="Start" WidthRequest="60" HeightRequest="35" VerticalOptions="Start"/>
-            <Label Text="Add Expense / Recived payment" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="StartAndExpand" TextColor="#eef3ff"/>
+                                       Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=.92}">
+
+
+            <Label Text="Add Expense / Recived payment" FontSize="20" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#eef3ff"/>
        
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,0" RelativeLayout.WidthConstraint="{ConstraintExpression
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
+                             Margin="0,0,0,0"
+                             RelativeLayout.WidthConstraint="{ConstraintExpression
                                        Type=RelativeToParent,
                                        Property=Width,
                                        Factor=1}">
@@ -71,6 +80,11 @@
                 
                  <Button Text="Submit Transaction" Command="{Binding SubmitExpenceCommand}" FontAttributes="Bold" BackgroundColor="White" BorderRadius="15" TextColor="#166cff" HorizontalOptions="Center" WidthRequest="200" HeightRequest="35" VerticalOptions="Start"/>
 
+                
+                    <Path x:Name="SubmitIncomeVector" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Aspect="Fill" WidthRequest="150" HeightRequest="150"  Data="M262 298V9.79585C242.48 3.43734 221.642 0 200 0C89.5431 0 0 89.543 0 200C0 235.606 9.3045 269.039 25.6148 298H262ZM222.988 118.191L129.988 201.191L118.177 211.732L108.287 199.37L68.287 149.37L91.713 130.63L121.823 168.268L203.012 95.8088L222.988 118.191Z"
+                       Fill="white" />
+             
+                
             </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>

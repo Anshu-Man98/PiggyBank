@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Boxx="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    x:Class="PiggyBank.View.OverViewPage.OverviewPage">
+      <ContentView.Content>
+
+
+        <RelativeLayout x:Name="Main"
+                        BackgroundColor="#162644"
+                        Margin="0,0,0,70">
+
+                <Path x:Name="vectorCurve" Margin="0"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+                                        Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=0.381}"
+                                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                                        Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=1.013}"
+        RelativeLayout.YConstraint="{ConstraintExpression
+                                    Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=-0.01}"
+        RelativeLayout.XConstraint="{ConstraintExpression
+                                    Type=RelativeToParent,
+                                    Property=Width,
+                                    Factor=-0.01}"
+        Aspect="Fill"
+        Data="M0 0V253.992C37.9934 269.456 79.7183 278 123.5 278C288.819 278 424.812 156.173 441.318 0H0Z"
+        Fill="#1F3F79"/>
+
+
+              <microcharts:ChartView x:Name="chartView"
+                                     Chart="{Binding DonutChart}"
+                                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.29}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.29}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Height,
+                            Factor=0.07}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.019}"/>
+
+                    <Frame x:Name="lineGraphContainer" 
+                       RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.25}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                                       ElementName=vectorCurve,
+                            Property=Height,
+                            Factor=1.18}"
+                            CornerRadius="10"
+                            Margin="25,0,25,0"          
+                            BackgroundColor="Black"
+                            HasShadow="True"
+                            IsClippedToBounds="True"
+                            Padding="0"
+                            Opacity="0">
+                 <StackLayout Margin="20,30,20,0">
+                    </StackLayout>
+                    </Frame>
+
+
+                <StackLayout x:Name="stackSpentContainer" Margin="15,30,15,0"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.37}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}"
+                                       RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                                       ElementName=lineGraphContainer,
+                            Property=Y,
+                            Factor=1.36}">
+                    
+                <Boxx:PancakeView x:Name="spentContainer" BackgroundGradientStartPoint="1,0.5"
+                                  BackgroundGradientEndPoint="0,4"
+                                  HeightRequest="1000" BackgroundColor="#25395F"
+                        Margin="0,10,0,0"
+                        CornerRadius="10"
+                        Opacity="1">
+
+                    <Boxx:PancakeView.Shadow>
+                        <Boxx:DropShadow Offset="2,3"/>
+
+                    </Boxx:PancakeView.Shadow>
+
+                    </Boxx:PancakeView>
+                    </StackLayout>
+
+
+
+                <microcharts:ChartView x:Name="linechartView"
+                                       Chart="{Binding LineChart}"
+                                       Margin="20,10,20,10"
+                                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Height,
+                                       Factor=0.22}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1.2}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                                        Type=RelativeToView,
+                                              ElementName=lineGraphContainer,
+                                        Property=Y,
+                                        Factor=1}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                                        Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=-0.1}"/>
+
+            <StackLayout Orientation="Horizontal"
+                         Padding="20,10,0,0"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                                Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.376}">
+
+                <Label HorizontalOptions="StartAndExpand"
+                       Text="Spending Breakdown"
+                       FontSize="20" FontAttributes="Bold"
+                      TextColor="#166cff" HorizontalTextAlignment="Center" />
+
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Horizontal"
+                             Margin="10,10,10,0"
+                             RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                                       Property=Width,
+                                       Factor=1}">
+
+                <Image Source="pigicon.png" Margin="0,0,0,0" HeightRequest="30" WidthRequest="30"/>
+
+                <Label  HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Text="{Binding UserName}"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                      TextColor="White"
+                      Margin="0,0,0,0" />
+
+                <Image HorizontalOptions="EndAndExpand"
+                       Source="settingIcon.png"
+                       Margin="0,0,10,0"
+                       HeightRequest="35"
+                       WidthRequest="25">
+                    <Image.GestureRecognizers>
+        <TapGestureRecognizer Tapped="SettingsTapped"/>
+                    </Image.GestureRecognizers>
+
+                </Image>
+                </StackLayout>
+
+
+            <!--<Ellipse x:Name="ellipseDate" Opacity="1"
+                Stroke="#377BFD" StrokeThickness="6" Fill="white"
+
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                       ElementName=chartView,
+                                       Property=Height,
+                                       Factor=0.5}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                                       ElementName=chartView,
+                                       Property=Width,
+                                       Factor=0.5}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                                       ElementName=chartView,
+                            Property=Y,
+                            Factor=2.045}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToParent,
+                            Property=Width,
+                            Factor=0.15}" />-->
+
+
+
+            <StackLayout Spacing="0" VerticalOptions="CenterAndExpand"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=chartView,
+                                       Property=Height,
+                                       Factor=1}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=chartView,
+                                       Property=Width,
+                                       Factor=1}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=chartView,
+                            Property=Y,
+                            Factor=1}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=chartView,
+                            Property=X,
+                            Factor=1}">
+                <Label Text="Nov"  FontSize="30" TextColor="White"
+                       HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+
+
+                    <Path x:Name="rectangleCurve" Margin="0" 
+                          RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.2}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.2}"
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                          ElementName=chartView,
+                            Property=Y,
+                            Factor=2}"
+                            RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                            ElementName=chartView,
+                            Property=X,
+                            Factor=31.5}"
+                            Stroke="#162644"
+                            Aspect="Fill"
+                            Opacity="1"
+                      Data="M700 350C700 543.3 543.3 700 350 700C156.7 700 0 543.3 0 350C0 156.7 156.7 0 350 0C543.3 0 700 156.7 700 350Z"
+                      Fill="#1F3F79"
+                      
+                      StrokeThickness="4"
+                      InputTransparent="True"/>
+
+
+
+            <StackLayout Spacing="0" Margin="15,10,0,0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=rectangleCurve,
+                                       Property=Height,
+                                       Factor=0.9}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=rectangleCurve,
+                                       Property=Width,
+                                       Factor=0.9}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=rectangleCurve,
+                            Property=Y,
+                            Factor=1}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=rectangleCurve,
+                            Property=X,
+                            Factor=0.955}">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                            <Ellipse Fill="#5791FF" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20"
+         HorizontalOptions="Start" />
+                            <StackLayout Spacing="0">
+                                <Label Text="Earned"   FontSize="15" FontAttributes="Bold" TextColor="#5791FF"
+                       HorizontalTextAlignment="Start" Margin="1,0,0,0" />
+                                <Label Text="{Binding TotalBalanceText}"   FontSize="15" FontAttributes="Bold" TextColor="White"
+                       HorizontalTextAlignment="Start" Margin="1,0,0,0" />
+                            </StackLayout>
+             </StackLayout>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                            <Ellipse Fill="#14CBD7" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20"
+         HorizontalOptions="Start" />
+                            <StackLayout Spacing="0">
+                                <Label Text="Spent"  FontSize="15" FontAttributes="Bold" TextColor="#14CBD7"
+                       HorizontalTextAlignment="Start" Margin="1,0,0,0" />
+                                <Label Text="{Binding MonthBalanceText}" FontSize="15"  FontAttributes="Bold" TextColor="White"
+                       HorizontalTextAlignment="Start" Margin="1,0,0,0" />
+                            </StackLayout>
+             </StackLayout>
+                </StackLayout>
+
+                </StackLayout>
+
+            <StackLayout x:Name="jon" Orientation="Vertical" Margin="20,15,20,10"
+                             RelativeLayout.HeightConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=stackSpentContainer,
+                                       Property=Height,
+                                       Factor=1}"
+                                       RelativeLayout.WidthConstraint="{ConstraintExpression
+                                       Type=RelativeToView,
+                ElementName=stackSpentContainer,
+                                       Property=Width,
+                                       Factor=1}"
+                                  RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=stackSpentContainer,
+                            Property=Y,
+                            Factor=1}"
+                                  RelativeLayout.XConstraint="{ConstraintExpression
+                            Type=RelativeToView,
+                ElementName=stackSpentContainer,
+                            Property=X,
+                            Factor=1}">
+
+                
+                <StackLayout Orientation="Horizontal" Margin="0"
+                             WidthRequest="500" HeightRequest="40">
+
+                <Ellipse Fill="#02FFC2" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20" 
+         HorizontalOptions="Start" />
+
+                    <Label  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Text="Food"  FontSize="20" FontAttributes="None"
+                      TextColor="White"
+                      Margin="0,0,10,0" />
+
+                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="20,000"  FontSize="20" FontAttributes="None"
+                      TextColor="White" />
+
+                
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0"
+                             WidthRequest="500" HeightRequest="40">
+
+                <Ellipse Fill="#05D2FF" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20" 
+         HorizontalOptions="Start" />
+
+                    <Label  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Text="Personal"  FontSize="20" FontAttributes="None"
+                      TextColor="White"
+                      Margin="0,0,10,0" />
+
+                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="20,000"  FontSize="20" FontAttributes="None"
+
+                      TextColor="White" />
+
+                
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0"
+                             WidthRequest="500" HeightRequest="40">
+
+                <Ellipse Fill="#00A1C5" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20" 
+         HorizontalOptions="Start" />
+
+                    <Label  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Text="Other"  FontSize="20" FontAttributes="None"
+                      TextColor="White"
+                      Margin="0,0,10,0" />
+
+                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="20,000"  FontSize="20" FontAttributes="None"
+                      TextColor="White" />
+
+                
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0"
+                             WidthRequest="500" HeightRequest="40">
+
+                <Ellipse Fill="#007EEC" WidthRequest="20" VerticalOptions="CenterAndExpand"
+         HeightRequest="20" 
+         HorizontalOptions="Start" />
+
+                    <Label  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Text="Shopping"  FontSize="20" FontAttributes="None"
+                      TextColor="White"
+                      Margin="0,0,10,0" />
+
+                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="20,000"  FontSize="20" FontAttributes="None"
+                      TextColor="White" />
+
+                
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0"
+                             WidthRequest="500" HeightRequest="40">
+
+                <Ellipse Fill="#03579c" WidthRequest="20" VerticalOptions="CenterAndExpand"
+                         
+         HeightRequest="20"
+         HorizontalOptions="Start" />
+
+                    <Label  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Text="Bill"  FontSize="20" FontAttributes="None"
+                      TextColor="White"
+                      Margin="0,0,10,0" />
+
+                <Label  HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="20,000"  FontSize="20" FontAttributes="None"
+                      TextColor="White" />
+
+                
+                </StackLayout>
+                </StackLayout>
+       </RelativeLayout>     
+    </ContentView.Content>
+</ContentView>
+

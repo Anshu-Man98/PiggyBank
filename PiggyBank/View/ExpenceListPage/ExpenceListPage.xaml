@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PiggyBank.View.ExpenceListPage.ExpenceListPage"
+     xmlns:Boxx="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.Content>
+
+           <StackLayout Padding="0,15,0,70" VerticalOptions="FillAndExpand" BackgroundColor="#162644">
+
+        <Grid HorizontalOptions="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Android corner radius 20-->
+        <!-- ios Corner radius 10-->
+        <!-- Background Frame -->
+        <Frame Grid.Row="0" BackgroundColor="#25395F"
+               Padding="0" Margin="0" HasShadow="True"
+               VerticalOptions="Center" HeightRequest="90"
+               WidthRequest="400"
+               HorizontalOptions="Center">
+            <Frame.CornerRadius>
+                <OnPlatform x:TypeArguments="x:Single">
+                    <On Platform="iOS" Value="15"></On>
+                    <On Platform="Android" Value="55"></On>
+                </OnPlatform>
+            </Frame.CornerRadius>
+        </Frame>  
+
+        <!-- Running Frame -->
+        <Frame x:Name="runningFrame" HeightRequest="75" WidthRequest="150"
+               BackgroundColor="#004EC3" HasShadow="False" Margin="5,0,5,0"
+               Padding="0"  HorizontalOptions="Start" VerticalOptions="Center">
+            <Frame.CornerRadius>
+                <OnPlatform x:TypeArguments="x:Single">
+                    <On Platform="iOS" Value="15"></On>
+                    <On Platform="Android" Value="50"></On>
+                </OnPlatform>
+            </Frame.CornerRadius>
+        </Frame>
+
+        <!-- Selection text1-->
+         <StackLayout Orientation="Horizontal"
+                      VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="155" HeightRequest="70"
+                      BackgroundColor="Transparent">
+            <StackLayout.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+                <TapGestureRecognizer Tapped="OnText1Tapped"></TapGestureRecognizer>
+            </StackLayout.GestureRecognizers>
+            <Label x:Name="text1"  HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="15"
+                   Text="This Month" VerticalOptions="Center" TextColor="White"/>
+        </StackLayout>
+
+        <!-- Selection text2-->
+         <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End" WidthRequest="155" HeightRequest="70" BackgroundColor="Transparent">
+            <StackLayout.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+                <TapGestureRecognizer Tapped="OnText2Tapped"></TapGestureRecognizer>
+            </StackLayout.GestureRecognizers>
+            <Label HorizontalOptions="CenterAndExpand" x:Name="text2" FontAttributes="Bold" FontSize="15"
+                   Text="Custom Month" VerticalOptions="Center" TextColor="#065BFF"/>
+        </StackLayout>
+
+    </Grid>
+
+           <!--<Boxx:PancakeView BackgroundGradientStartPoint="1,0.5" BackgroundGradientEndPoint="0,4"
+                        HeightRequest="90" 
+                        Margin="20,0,20,0"
+                        CornerRadius="25"
+                        Opacity="0.8">
+
+                    <Boxx:PancakeView.Shadow>
+                        <Boxx:DropShadow Offset="2,3"/>
+
+                    </Boxx:PancakeView.Shadow>
+                    
+                      <Boxx:PancakeView.BackgroundGradientStops>
+                        <Boxx:GradientStopCollection>
+                            <Boxx:GradientStop Color="#065BFF" Offset="0.3"/>
+                             <Boxx:GradientStop Color="#BCD2FF" Offset="0.7"/>
+                        </Boxx:GradientStopCollection>
+                    </Boxx:PancakeView.BackgroundGradientStops>
+
+                    </Boxx:PancakeView>-->
+
+
+
+                <StackLayout>
+                     <Label Text="Transactions" FontSize="20" FontAttributes="Bold"
+                            TextColor="#065BFF" HorizontalTextAlignment="Start" Margin="20,0,20,0"/>
+                 </StackLayout>
+
+
+          <Frame CornerRadius="35"
+           Margin="20,0,20,0"          
+           BackgroundColor="#25395F" 
+           HasShadow="True"            
+           IsClippedToBounds="True"
+           Padding="0">
+
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+            
+
+            <ScrollView Grid.Row="0">   
+                 <StackLayout Padding="5,10,5,0">
+
+
+                     <ListView x:Name="listView" ItemsSource="{Binding UserExpense}"
+                               BackgroundColor="#25395F" 
+                               SeparatorVisibility="None"
+                               HasUnevenRows="True"
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               HeightRequest="490" >
+
+                         <ListView.ItemTemplate>
+                            <DataTemplate>
+                                 
+
+                                 <ViewCell>
+
+                                     <Frame CornerRadius="70"
+                                        BackgroundColor="#004EC3"
+                                        HasShadow="True"
+                                        IsClippedToBounds="True"
+                                        Padding="0"    
+                                        Margin="3">
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="FillAndExpand"
+                                             MinimumHeightRequest="100"
+                                             Padding="5" >
+                          <StackLayout.GestureRecognizers>
+                           <TapGestureRecognizer Tapped="ExpenceRowTapped"/>
+                            </StackLayout.GestureRecognizers> 
+                                <StackLayout Orientation="Vertical" Padding="2" VerticalOptions="Center" Spacing="2">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Spacing="5" WidthRequest="400" Padding="10,0,10,0" >
+
+                                <Label Text="₹" FontSize="30" TextColor="#FAE6B5" VerticalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="{Binding Amount}" FontSize="30" TextColor="{Binding color}" VerticalOptions="Center" FontAttributes="Bold"/>
+                                <StackLayout Orientation="Vertical" Spacing="2" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                <Label Text="{Binding comments}"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       FontAttributes="Bold"/>
+                                <Label Text="10/05/2022"
+                                       FontSize="10"
+                                       TextColor="White"
+                                       FontAttributes="None"/>
+                               </StackLayout>
+                                </StackLayout>
+                                </StackLayout >
+                                    
+                                </StackLayout>
+                                          </Frame>
+                                </ViewCell>
+                             </DataTemplate>
+                         </ListView.ItemTemplate>
+
+                         </ListView>  
+                     
+                </StackLayout>
+             </ScrollView>
+        </Grid>
+                 
+                     </Frame>
+
+            
+            
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>
+

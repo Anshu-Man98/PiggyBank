@@ -4,11 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PiggyBank.View"
     x:Class="PiggyBank.View.MainPageTab"
+    xmlns:xts="http://xamarin.com/schemas/2020/toolkit"
 
-    NavigationPage.HasNavigationBar="True">
-
+    NavigationPage.HasNavigationBar="False">
     <NavigationPage.TitleView>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  >
+    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Fill"  >
          <Label HorizontalOptions="EndAndExpand" FontSize="20" FontAttributes="Bold" TextColor="#176bff" >
                 <Label.FormattedText>
                 <FormattedString>
@@ -17,8 +17,15 @@
                 </FormattedString>
                 </Label.FormattedText>
                 </Label>
-    </StackLayout>
+    </StackLayout>-->
+          <RelativeLayout x:Name="Main" BackgroundColor="White">
+        <Label Text="ANshuuuuuooooooo"  FontSize="20" FontAttributes="Bold" TextColor="Black"
+                       HorizontalTextAlignment="Start" Margin="15,0,0,0" />
+
+    </RelativeLayout>
 </NavigationPage.TitleView>
+
+  
     <!--<local:StatusPage Title="Status" />
     <local:AddExpenditure Title="Add Expenditure"/>
     <ContentPage Title="Page2" IconImageSource="clock.png">

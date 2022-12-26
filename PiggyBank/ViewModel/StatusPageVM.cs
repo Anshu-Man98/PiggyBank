@@ -7,6 +7,8 @@ using System.Runtime.CompilerServices;
 using PiggyBank.Model;
 using System.Collections.Generic;
 using System.Linq;
+using Microcharts;
+using SkiaSharp;
 
 namespace PiggyBank.ViewModel
 {
@@ -17,41 +19,26 @@ namespace PiggyBank.ViewModel
 
         public StatusPageVM()
         {
-            int UserId = LoginPageVM.UserId;
             this._userDatabase = DependencyService.Get<IUserDatabase>();
-            userName = _userDatabase.getUserName(UserId);
+            greatUser();
             setMonth();
-            ExpenditureStatus(UserId);
-
+            ExpenditureStatus();
+            DisplayBalancePieChart();
+            DisplayLineChart();
         }
 
-
-
-
-        public double totalBalance = 0.6;
-        public double monthBalance = 0.7;
         public string totalBalanceText = "";
-        public string monthBalanceText = "30000";
-        public string userName = "user";
-        public string month = "This Month";
+        public string monthBalanceText = "";
+        public string nikName = "user";
+        public string currentMonth = "This Month";
+        public DonutChart donutChart = null;
+        public LineChart lineChart = null;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-
-        public double TotalBalance
-        {
-            set { totalBalance = value; }
-            get { return totalBalance; }
-        }
-
-        public double MonthBalance
-        {
-            set { monthBalance = value; OnPropertyChanged(nameof(MonthBalance)); }
-            get { return monthBalance; }
         }
 
         public string MonthBalanceText
@@ -68,41 +55,115 @@ namespace PiggyBank.ViewModel
 
         public string UserName
         {
-            set { userName = value; OnPropertyChanged(nameof(UserName)); }
-            get { return userName; }
+            set { nikName = value; OnPropertyChanged(nameof(UserName)); }
+            get { return nikName; }
         }
 
         public string Month
         {
-            set { month = value; OnPropertyChanged(nameof(Month)); }
-            get { return month; }
+            set { currentMonth = value; OnPropertyChanged(nameof(Month)); }
+            get { return currentMonth; }
+        }
+
+        public LineChart LineChart
+        {
+            set { lineChart = value; OnPropertyChanged(nameof(lineChart)); }
+            get { return lineChart; }
+        }
+
+        public DonutChart DonutChart
+        {
+            set { donutChart = value; OnPropertyChanged(nameof(donutChart)); }
+            get { return donutChart; }
+        }
+
+        public void greatUser()
+        {
+            UserName = "Hi " + _userDatabase.getUserNikName();
         }
 
         public void setMonth()
-        {
-            
+        { 
             DateTime dt = DateTime.Now;
-            string thisMonth = dt.ToString("MMMM");
-            month = thisMonth;
+            string thisMonth = dt.ToString("MM");
+            currentMonth = thisMonth;
         }
 
-        public void ExpenditureStatus(int UserId)
+        public void ExpenditureStatus()
         {
-            var amt = _userDatabase.getUserAmt(UserId);
-            var expense = _userDatabase.TotalUserExpense(UserId);
+            var amt = _userDatabase.getUserBalanceAndIncome();
+            var expense = _userDatabase.TotalUserExpense();
 
-            double overallExpense = amt[1] + expense;
+            double overallExpense = amt[0] + expense;
 
-            double monthExpence = amt[0] + expense;
+            double monthExpence = amt[1] + expense;
 
             TotalBalanceText = overallExpense.ToString();
 
             MonthBalanceText = monthExpence.ToString();
-
-
         }
 
+        private void DisplayLineChart()
+        {
+            var entries = new[]
+            {
+             new ChartEntry(10)
+             {
+                 Color = SKColor.Parse("#02FFC2")
+             },
+             new ChartEntry(0)
+             {
+                 Color = SKColor.Parse("#05D2FF")
+             },
+             new ChartEntry(0)
+             {
+                 Color = SKColor.Parse("#00A1C5")
+             },
+             new ChartEntry(0)
+             {
+                 Color = SKColor.Parse("#007EEC")
+             },
+             new ChartEntry(0)
+             {
+                 Color = SKColor.Parse("#03579c")
+             }
+        };
 
+            var lineChartt = new LineChart()
+            {
+                Entries = entries,
+                IsAnimated = true,
+                BackgroundColor = SKColors.Transparent,
+                PointSize = 35,
+                LineSize = 8
+            };
+
+            LineChart = lineChartt;
+        }
+
+        private void DisplayBalancePieChart()
+        {
+            var entries = new[]
+            {
+                 new ChartEntry(148)
+                 {
+                     Color = SKColor.Parse("#065BFF")
+                 },
+                new ChartEntry(108)
+                 {
+                     Color = SKColor.Parse("#5791FF")
+                 }
+
+            };
+
+            var chartt = new DonutChart()
+            {
+                Entries = entries,
+                IsAnimated = true,
+                BackgroundColor = SKColors.Transparent
+            };
+            DonutChart = chartt;
+        }
 
 
         //public void setUserStatus(int userId)

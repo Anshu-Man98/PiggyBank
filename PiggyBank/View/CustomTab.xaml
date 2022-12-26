@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:local1="clr-namespace:PiggyBank.View.OverViewPage"
+    xmlns:AddExpence="clr-namespace:PiggyBank.View.AddExpensePage"
+    xmlns:ExpenceList="clr-namespace:PiggyBank.View.ExpenceListPage"
+    x:Class="PiggyBank.View.CustomTab"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#162644"
+>
+
+    <ContentPage.Resources BackgroundColor="#F1F7FF">
+        <ResourceDictionary>
+            <ControlTemplate x:Key="normalTab1">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        WidthRequest="35"
+                        HeightRequest="35"
+                        Margin="2"
+                        Source="pieIcon.png" />
+                </Grid>
+            </ControlTemplate>
+
+            <ControlTemplate x:Key="normalTab2">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Image
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        WidthRequest="35"
+                        HeightRequest="35"
+                        Margin="2"
+                        Source="arrowsIcon.png" />
+                </Grid>
+            </ControlTemplate>
+
+           <ControlTemplate x:Key="popButtonTab" >
+                <Grid >
+                    <ImageButton
+                        InputTransparent="True"
+                        Source="addIcon.png"
+                        Padding="0"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#162644"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Margin="0,0,0,15"
+                        CornerRadius="70"
+                        IsVisible="True"
+                        xct:ShadowEffect.Color="White"
+                        xct:ShadowEffect.Radius="100"
+                        >
+                    </ImageButton>
+                </Grid>
+            </ControlTemplate>
+
+
+            <Style x:Key="customTabStyle"
+                   TargetType="xct:TabView">
+                <Setter
+                    Property="TabStripHeight"
+                    Value="60"/>
+                <Setter
+                    Property="IsTabTransitionEnabled"
+                    Value="False"/>
+                <Setter
+                    Property="TabContentBackgroundColor"
+                    Value="#162644"/>
+                <Setter
+                    Property="TabStripPlacement"
+                    Value="Bottom"/>
+                                <Setter
+                    Property="TabStripBackgroundColor"
+                    Value="#162644"/>
+
+
+            </Style>
+        </ResourceDictionary>
+        </ContentPage.Resources>
+
+
+
+
+    <ContentPage.Content>
+
+        
+
+<Grid>
+            
+        <xct:TabView Style="{StaticResource customTabStyle}" BackgroundColor="#F1F7FF">
+
+                <!-- Tab Strip container -->
+
+                <xct:TabView.TabStripBackgroundView >
+                    <BoxView BackgroundColor="#163572"
+                             WidthRequest="0"
+                             CornerRadius="15" Margin="20,0,20,5" />
+                </xct:TabView.TabStripBackgroundView>
+
+
+                 <!-- Tab 1 -->
+                <xct:TabViewItem
+                    ControlTemplate="{StaticResource normalTab1}">
+                    <local1:OverviewPage></local1:OverviewPage>
+                </xct:TabViewItem>
+
+
+                <!-- Tab 2 -->
+                 <xct:TabViewItem
+                    ControlTemplate="{StaticResource popButtonTab}" TabTapped="TabViewItem_TabTapped">
+                </xct:TabViewItem>
+
+
+                <!-- Tab 3 -->
+                <xct:TabViewItem
+                    ControlTemplate="{StaticResource normalTab2}">
+                    <ExpenceList:ExpenceListPage></ExpenceList:ExpenceListPage>
+                </xct:TabViewItem>
+
+
+
+        </xct:TabView>
+  </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
